@@ -1,11 +1,23 @@
 /* шапка сайта */
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px and max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
 .hero {
  display: flex;
  position: relative;
  flex-direction: column;
  min-height: 400px;
  width: 100%;
- background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+ background-image: url(../images/banner-bg.jpg);
  background-color: #6d6c69;
  background-repeat: no-repeat;
  background-position: center top;
@@ -79,20 +91,53 @@ h1 {
    text-transform: uppercase;
 }
 
-.one-trend-block {
-background-image: url("../images/trend1.jpg");
+.trend-block {
+   display: flex;
+   position: relative;
 background-color: #6d6c69;
-background-repeat: no-repeat; background-position: center center;
+background-repeat: no-repeat; 
+background-position: center center;
 background-size: cover;
-
+width: calc(25% - 12px);
+height: 300px;
+position: relative;
+margin-right: 4px;
 }
-.one-trend-block::after {
+.trend-block:last-child {
+    margin-right: 0;  
+}
+.trend-block::after {
    content: '';
-  position: relative;
+  position: absolute;
   background-color: black;
   opacity: 0.5;
 }
-
+.trend-block-1 {
+   background-image: url("../images/trend1.jpg");
+}
+.trend-block-2 {
+   background-image: url("../images/trend2.jpg");
+}
+.trend-block-3 {
+   background-image: url("../images/trend3.jpg");
+}
+.trend-block-4 {
+   background-image: url("../images/trend4.jpg");
+}
+.trend-title {
+   color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.trend-items {
+   border: 3px solid #b2a15c;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-bottom: 5px;
+   margin-top: auto;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
 
 @media (min-width: 1200px) {
    .trend-block {
@@ -394,7 +439,7 @@ justify-content: center;
 
 .social-link-twitter {
  display: block;
- background-image: url("../svg/004-twitter.svg");/*не работает...*/
+ background-image: url(../svg/004-twitter.svg);
  background-repeat: no-repeat;
  background-size: 20px;
  background-position: center center;
@@ -403,7 +448,7 @@ justify-content: center;
 }
 .social-link-pinterest {
  display: block;
- background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+ background-image: url(../svg/001-pinterest.svg);
  background-repeat: no-repeat;
  background-size: 20px;
  background-position: center center;
@@ -412,7 +457,7 @@ justify-content: center;
 }
 .social-link-facebook {
  display: block;
- background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+ background-image: url(../svg/002-facebook-logo.svg);
  background-repeat: no-repeat;
  background-size: 20px;
  background-position: center center;
@@ -421,7 +466,7 @@ justify-content: center;
 }
 .social-link-instagram {
  display: block;
- background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+ background-image: url(../svg/005-instagram.svg);
  background-repeat: no-repeat;
  background-size: 20px;
  background-position: center center;
@@ -430,7 +475,7 @@ justify-content: center;
 }
 .social-link-tumblr {
  display: block;
- background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+ background-image: url(../svg/003-tumblr.svg);
  background-repeat: no-repeat;
  background-size: 20px;
  background-position: center center;
