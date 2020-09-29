@@ -1,9 +1,35 @@
 /* шапка сайта */
-@media (max-width: 767px) {}
+@media (max-width: 640px) {
+   .hero {
+      background-image: url(../images/banner-mobile.jpg);
+   }
 
-@media (min-width: 768px and max-width: 1199px) {}
+   .trend-block {
+      display: flex;
+      width: 50%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+}
+
+@media (min-width: 641px and max-width: 1199px) {
+   .hero {
+      background-image: url(../images/banner-bg-tablet.jpg);
+   }
+
+   .trend-block {
+      display: flex;
+      width: 50%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }  
+}
 
 @media (min-width: 1200px) {
+   .hero {
+      background-image: url(../images/banner-bg.jpg);
+   }
+
    .trend-block {
       display: flex;
       width: 25%;
@@ -17,7 +43,6 @@
    flex-direction: column;
    min-height: 400px;
    width: 100%;
-   background-image: url(../images/banner-bg.jpg);
    background-color: #6d6c69;
    background-repeat: no-repeat;
    background-position: center top;
@@ -126,6 +151,7 @@ h1 {
    height: 300px;
    position: relative;
    margin-right: 4px;
+   margin-bottom: 4px;
 }
 
 .trend-block:last-child {
