@@ -1,41 +1,4 @@
 /* шапка сайта */
-@media (max-width: 640px) {
-   .hero {
-      background-image: url(../images/banner-mobile.jpg);
-   }
-
-   .trend-block {
-      display: flex;
-      width: 50%;
-      flex-wrap: wrap;
-      justify-content: space-between;
-   }
-}
-
-@media (min-width: 641px and max-width: 1199px) {
-   .hero {
-      background-image: url(../images/banner-bg-tablet.jpg);
-   }
-
-   .trend-block {
-      display: flex;
-      width: 50%;
-      flex-wrap: wrap;
-      justify-content: space-between;
-   }  
-}
-
-@media (min-width: 1200px) {
-   .hero {
-      background-image: url(../images/banner-bg.jpg);
-   }
-
-   .trend-block {
-      display: flex;
-      width: 25%;
-      justify-content: space-between;
-   }
-}
 
 .hero {
    display: flex;
@@ -110,7 +73,46 @@ h1 {
    font-size: 45px;
 }
 
+/*media*/
+/*trend*/
+
+@media (max-width: 640px) {
+   .hero {
+      background-image: url("../images/banner-mobile.jpg");
+   }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+   .trend-block {
+      width: 100%;
+   }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+   .hero {
+      background-image: url("../images/banner-bg-tablet.jpg");
+   }
+}
+
+@media (min-width: 1200px) {
+   .hero {
+      background-image: url("../images/banner-bg.jpg");
+   }
+
+   .trend-block {
+      flex-wrap: wrap;
+      width: 25%;
+   }
+}
+
 /* весь блок */
+.trend-block {
+   display: flex;
+   width: 50%;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
 .trend-news-title {
    text-transform: uppercase;
    font-family: arial, sans-serif;
@@ -135,7 +137,7 @@ h1 {
    background-color: #b2a15c;
 }
 
-.all-trends {
+.flex-container>.trend-block {
    display: flex;
    text-transform: uppercase;
 }
