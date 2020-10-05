@@ -674,22 +674,57 @@ section>email-address {
    flex-wrap: wrap;
    align-items: flex-start;
 }
-
+.products-title-header {
+   display: block;
+   margin-top: 48px;
+   margin-left: 24px;
+   text-align: start;
+}
 .description {
+   display: block;
+   text-align: start;
     margin-top: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
     font-family: arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
 }
 .product-content {
-margin-top: -30px;
+margin-top: -40px;
 margin-right: 20px;
+margin-left: 20px;
 border: 4px solid #b2a15c;
 position: relative;
+align-items: flex-start;
 z-index: 1;
- 
+}
 
+.description > .product-link {
+   text-transform: lowercase;
+   color: #b2a15c;
+}
+.price {
+   display: flex;
+   font-family: arial, sans-serif;
+   justify-content: space-around;
+   align-items: flex-end;
+   margin-bottom: 10px;
+}
+.old-price {
+   font-size: 16px;
+   font-weight: 400;
+   text-decoration: line-through;
+}
+.new-price {
+   font-size: 24px;
+   font-weight: 700;
+}
+.button {
+   align-items: flex-start;
+   width: 160px;
+   height: 47px;
 }
 
 
