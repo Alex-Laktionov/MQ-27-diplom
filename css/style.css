@@ -40,6 +40,12 @@ body {
    width: 175px;
 }
 
+@media (max-width: 640px) and (orientation: portrait) {
+   .header-logo {
+      margin-top: 200px;
+   }
+}
+
 @media (max-width: 1199px) {
    .header-logo {
       margin-left: 30px;
@@ -245,13 +251,17 @@ h1 {
    justify-content: space-between;
 }
 
+.now-in-trend {
+   margin-top: 40px;
+}
+
 .trend-news-title {
    text-transform: uppercase;
    font-family: arial, sans-serif;
    font-size: 16px;
    font-weight: bold;
    text-align: center;
-   margin-top: 40px;
+   margin: 0;
 }
 
 .trend-news-title::after {
@@ -324,9 +334,14 @@ h1 {
 
 .all-info {
    margin-top: 50px;
+}
+
+.all-info-wrapper {
+   display: flex;
    width: 1200px;
-   margin-left: auto;
-   margin-right: auto;
+   margin: auto;
+   padding: 0 15px;
+   justify-content: space-between;
 }
 
 /*основной контент*/
@@ -344,22 +359,16 @@ a {
 }
 
 .main-content {
-   display: flex;
-   flex-direction: column;
+   width: 780px;
+   margin-right: 20px;
 }
 
 .news-post {
    display: flex;
-   width: 800px;
-   margin-top: 10px;
    margin-bottom: 60px;
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-   .flex-container {
-      justify-content: center;
-   }
-
    .main-content {
       max-width: 590px;
    }
@@ -380,9 +389,13 @@ a {
    }
 
    .left-photo {
+      float: left;
       max-width: 590px;
       margin-right: 0;
       margin-bottom: 10px;
+      height: 275px;
+      margin-left: 0;
+      margin-right: 20px;
    }
 
    .news-post::after {
@@ -391,7 +404,6 @@ a {
       height: 4px;
       background-color: #eeeeee;
       margin-top: 10px;
-
    }
 
    .socials {
@@ -427,19 +439,12 @@ time {
    margin-right: 20px;
 }
 
-.left-photo {
-   float: left;
-   height: 275px;
-   margin-left: 0;
-   margin-right: 20px;
-}
-
 .one-news-blog {
    display: block;
    width: 500px;
    padding-top: 0;
-   padding-left: 10px;
-   padding-right: 10px;
+   padding-left: 32px;
+   padding-right: 16px;
 }
 
 h2 {
@@ -476,17 +481,12 @@ h2 {
 
 /* боковой контент */
 .right-side-block {
+   width: 272px;
    text-transform: uppercase;
    font-family: arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
    text-align: center;
-}
-
-.different-sections {
-   display: flex;
-   flex-direction: column;
-   width: 280px;
 }
 
 .different-section {
@@ -529,11 +529,8 @@ h2 {
    font-family: arial, sans-serif;
 }
 
-.right-side-content {
-   text-align: left;
-}
-
 .right-news-title {
+   text-align: left;
    display: block;
    margin-top: 5px;
 }
@@ -590,7 +587,6 @@ section>email-address {
 
 .button {
    display: block;
-   width: 287px;
    height: 47px;
    background-color: #b69f5b;
    border-style: none;
@@ -599,6 +595,10 @@ section>email-address {
    text-transform: uppercase;
    font-weight: 700;
    font-size: 15px;
+}
+
+.form-row-group>.button {
+   width: 287px;
 }
 
 .all-tegs {
@@ -673,15 +673,16 @@ section>email-address {
 
 .products {
    text-align: center;
+   
 }
 
 .all-products {
    display: flex;
+   justify-content: center;
 }
 
 .products-image {
    width: 300px;
-
 }
 
 .product-item {
@@ -707,6 +708,7 @@ section>email-address {
       width: 49%;
    }
 }
+
 @media (max-width: 640px) {
    .product-item {
       flex-wrap: wrap;
@@ -734,6 +736,7 @@ section>email-address {
 }
 
 .product-content {
+   height: 280px;
    margin-top: -40px;
    margin-right: 20px;
    margin-left: 20px;
@@ -747,6 +750,8 @@ section>email-address {
    text-transform: lowercase;
    color: #b2a15c;
 }
+
+/*НЕ РАБОТАЕТ ПОЧЕМУ-ТО*/
 
 .price {
    display: flex;
@@ -767,15 +772,13 @@ section>email-address {
    font-weight: 700;
 }
 
-.button {
-   align-items: flex-start;
+.buy-one-click>.button {
    width: 160px;
-   height: 47px;
 }
-
 
 /* footer */
 .page-footer {
+   margin-top: 60px;
    width: 100%;
 }
 
@@ -783,7 +786,9 @@ section>email-address {
    display: flex;
    height: 80px;
    padding: 0%;
-   margin-left: 25px;
+   margin-top: 48px;
+   margin-left: 20px;
+   margin-right: 20px;
    background-color: #f3f7f6;
    background-position: center center;
    justify-content: center;
