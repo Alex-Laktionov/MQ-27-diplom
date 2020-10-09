@@ -128,6 +128,10 @@ h1 {
    .hero {
       background-image: url("../images/banner-mobile.jpg");
       background-position: center bottom;
+      min-height: 40rem;
+   }
+   .flex-container {
+      flex-direction: column;
    }
 
    .main-title {
@@ -154,12 +158,33 @@ h1 {
 @media (max-width: 640px) and (orientation: portrait) {
    .trend-block {
       width: 100%;
+      margin-bottom: 4px;
+   }
+   .header-logo {
+      order: 2;
+      margin: 12rem auto 0;
+   }
+}
+@media (max-width: 640px) and (orientation: landscape) {
+   .trend-block {
+      width: calc(50% - 4px);
+      min-width: 320px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+   }
+
+   trend-block:nth-child(2n) {
+      margin-right: 0;
    }
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
    .hero {
       background-image: url("../images/banner-bg-tablet.jpg");
+      background-position: center bottom;
+   }
+   .header-logo {
+      margin-left: 30px;
    }
 
    .trend-block {
@@ -321,18 +346,22 @@ h1 {
 
 .all-info-wrapper {
    display: flex;
-   width: 1200px;
+   /*width: 1200px;*/
    margin: auto;
    padding: 0 15px;
-   justify-content: space-between;
+   justify-content: center;
+}
+@media (max-width: 640px) {
+   .all-info-wrapper {
+      flex-direction: column;   
+   }
+
+   .news-post {
+      flex-direction: column;
+   }
 }
 
 /*основной контент*/
-
-.container {
-   width: 1170px;
-   max-width: 1200px;
-}
 
 a {
    text-decoration: none;
@@ -469,6 +498,9 @@ h2 {
    font-family: arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
+   text-align: start;
+}
+.right-news-titles {
    text-align: center;
 }
 
@@ -654,8 +686,7 @@ section > email-address {
 }
 
 .products {
-   text-align: center;
-
+      text-align: center;
 }
 
 .all-products {
