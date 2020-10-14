@@ -10,6 +10,50 @@
 </head>
 
 <body>
+
+  <div class="pop-up hidden-window">
+    <div class="pop-up_row">
+        <div class="pop-up_exit"></div>
+        <h2><a class="pop-up_title title line" href="#0">Ваш фидбек</a></h2>
+        <div class="pop-up_body">
+            <form class="pop-up_form" action="#0" method="post">
+
+                <label class="pop-up_periodicity">
+                    <span class="pop-up_text">Как часто вы заходите на сайт?</span>
+                    <select class="select">
+                        <option value="periodicity" selected="">Почти каждый день</option>
+                        <option value="seldom">Редко</option>
+                        <option value="hourly">Часто</option>
+                    </select>
+                </label>
+
+                <div class="subscription_row">
+                    <span class="pop-up_text">Вы подписанны на e-mail подписку?</span>
+                    <div class="subscription_item_row">
+                        <label class="subscription_item">
+                            <input name="sub" class="subscription_radio" type="radio" value="yes" checked="">
+                            <span class="subscription_text">Да</span>
+                        </label>
+                        <label class="subscription_item">
+                            <input name="subscription" class="subscription_radio" type="radio" value="no">
+                            <span class="subscription_text"> Нет</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <label class="textarea_row">
+                    <span class="pop-up_text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+                    <textarea class="textarea" placeholder="Может больше рецептов?"required=""></textarea>
+                </label>
+
+                <button type="submit" class="submit_button">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
   <header class="hero">
     <div class="flex-container">
       <img src="svg/noemi-logo.svg" class="header-logo" alt="Noemi-logo" />
