@@ -1,6 +1,10 @@
 body {
    margin: 0;
 }
+/*
+.hidden {
+   display: none;
+}*/
 .pop-up {
    width: 100%;
    position: fixed;
@@ -22,7 +26,7 @@ body {
 }
 .pop-up_row {
    position: relative;
-   max-width: 390px;
+   max-width: 360px;
    margin: 0 auto;
    padding-left: 30px;
    padding-right: 30px;
@@ -32,14 +36,18 @@ body {
    padding-bottom: 30px;
      font-family: arial, serif;
 }
-.pop-op_exit {
-   background-image: url(../img/svg/form-x.svg);
+.pop-up_exit {
+   background-image: url(../svg/form-x.svg);
    width: 27px;
    height: 27px;
    background-repeat: no-repeat;
    right: 0;
    top: -30px;
    position: absolute;
+   z-index: 100;
+}
+.pop-up_exit::after {
+   display: none;
 }
 a {
    text-decoration: none;
@@ -86,35 +94,42 @@ a {
    padding-left: 18px;
    -webkit-appearance: none;
    -moz-appearance: none;
-   background-image: url(../img/svg/form-arrows.svg);
+   background-image: url(../svg/form-arrows.svg);
    background-repeat: no-repeat;
-   background-position: right 23px center;
-   background-size: 9px;
+   background-position: right 10px center;
+   background-size: 10px;
  border: none;
+ font-family: Arial, Helvetica, sans-serif;
 }
 .subscription_text {
-
    align-self: center;
    margin-right: 33px;
+}
+.subscription_radio {
+   display: none;
 }
 .subscription_text::before {
    content: "";
    width: 25px;
    height: 25px;
-   background-image: url(../img/svg/form-empty-circle.svg);
+   background-image: url(../svg/form-empty-circle.svg);
    background-repeat: no-repeat;
    display: inline-block;
    background-position: center center;
    background-size: 25px;
    margin-right: 6px;
+ 
 }
-
+.subscription_item_row {
+   margin-top: 1em;
+    align-items: center; 
+}
 .subscription_row {
    margin-top: 30px;
    display: block;
 }
 .subscription_radio:checked ~ .subscription_text::before {
-   background-image: url(../img/svg/form-circle.svg);
+   background-image: url(../svg/form-circle.svg);
 }
 .textarea_row {
    margin-top: 30px;
@@ -124,11 +139,12 @@ a {
    margin-top: 10px;
    display: block;
    height: 132px;
-   width: 100%;
+   width: -webkit-fill-available;
    background-color: #f3f7f6;
    padding-top: 20px;
    padding-left: 18px;
  border: none;
+ font-family: Arial, Helvetica, sans-serif;
 }
 .submit_button {
    margin-top: 30px;
