@@ -1,10 +1,10 @@
 body {
    margin: 0;
 }
-/*
+
 .hidden {
    display: none;
-}*/
+}
 .pop-up {
    width: 100%;
    position: fixed;
@@ -26,7 +26,7 @@ body {
 }
 .pop-up_row {
    position: relative;
-   max-width: 360px;
+   max-width: 320px;
    margin: 0 auto;
    padding-left: 30px;
    padding-right: 30px;
@@ -573,7 +573,7 @@ section>email-address {
    width: 48px;
    height: 48px;
    background-color: #000000;
-   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+   background-image: url(../svg/search.svg);
    background-repeat: no-repeat;
    background-size: 25px;
    background-color: #b69f5b;
