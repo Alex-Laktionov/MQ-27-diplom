@@ -1,10 +1,10 @@
 body {
    margin: 0;
 }
-
+/*
 .hidden {
    display: none;
-}
+}*/
 .pop-up {
    width: 100%;
    position: fixed;
@@ -139,7 +139,8 @@ a {
    margin-top: 10px;
    display: block;
    height: 132px;
-   width: -webkit-fill-available;
+   max-width: 300px;
+   min-width: 300px;
    background-color: #f3f7f6;
    padding-top: 20px;
    padding-left: 18px;
